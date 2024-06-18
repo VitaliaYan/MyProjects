@@ -1,0 +1,13 @@
+C:\Users\yanso\source\repos\Ispar\Ispar\bin\Release\Ispar.exe.config
+C:\Users\yanso\source\repos\Ispar\Ispar\bin\Release\Ispar.exe
+C:\Users\yanso\source\repos\Ispar\Ispar\bin\Release\Ispar.pdb
+C:\Users\yanso\source\repos\Ispar\Ispar\obj\Release\Ispar.csprojAssemblyReference.cache
+C:\Users\yanso\source\repos\Ispar\Ispar\obj\Release\Ispar.Form1.resources
+C:\Users\yanso\source\repos\Ispar\Ispar\obj\Release\Ispar.Form2.resources
+C:\Users\yanso\source\repos\Ispar\Ispar\obj\Release\Ispar.Form3.resources
+C:\Users\yanso\source\repos\Ispar\Ispar\obj\Release\Ispar.Form4.resources
+C:\Users\yanso\source\repos\Ispar\Ispar\obj\Release\Ispar.Properties.Resources.resources
+C:\Users\yanso\source\repos\Ispar\Ispar\obj\Release\Ispar.csproj.GenerateResource.cache
+C:\Users\yanso\source\repos\Ispar\Ispar\obj\Release\Ispar.csproj.CoreCompileInputs.cache
+C:\Users\yanso\source\repos\Ispar\Ispar\obj\Release\Ispar.exe
+C:\Users\yanso\source\repos\Ispar\Ispar\obj\Release\Ispar.pdb
