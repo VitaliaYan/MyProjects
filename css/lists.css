@@ -1,0 +1,104 @@
+/* Подключение Montserrat в CSS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Общие стили */
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh; /* Занимает как минимум 100% высоты окна браузера */
+    background-image: url('../images/back2.png');
+    background-size: cover; /* Растягиваем изображение на всю область фона */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Отключаем повторение изображения */
+    opacity: 0.8;
+}
+
+body::-webkit-scrollbar {
+    height: 20px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #ffffff; /* Цвет фона трека (полосы прокрутки) */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #3f5f78cf; /* Цвет ползунка (полосы прокрутки) */
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin: 20px;
+    display: flex;
+    background-color: #3f5f78cf;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Добавляем небольшую тень */
+    width: 100%; /* Растягиваем по ширине окна */
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form-group input[type="button"], .form-group input[type="file"], .form-group input[type="submit"] {
+    background-color: #3f5f78cf;
+    color: #fff;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    width: 80%; /* кнопка занимает всю доступную ширину */
+    box-sizing: border-box; /* включаем учет границ и отступов внутри указанной ширины */
+    margin: 10px;
+    padding: 10px; /* добавляем внутренние отступы */
+    box-shadow: none;
+    text-align: center;
+}
+
+.form-group input[type="button"]:hover, .form-group input[type="submit"]:hover {
+    background-color: #4e7593;
+}
+
+label {
+    display: block;
+    margin-bottom: 2px;
+    margin-left: 30px;
+    font-weight: bold;
+    color:#ffffff;
+    font-size: 25px;
+    text-align: left;
+    /*white-space: nowrap;*/
+}
+
+.swal-custom {
+    color:#3f5f78;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    opacity: 0.95;
+}
+
+.swal-button {
+    background-color:#3f5f78;
+    color:#ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    box-shadow: none;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+}

@@ -1,0 +1,424 @@
+/* Подключение Montserrat в CSS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Общие стили */
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh; /* Занимает как минимум 100% высоты окна браузера */
+    background-image: url('../images/back2.png');
+    background-size: cover; /* Растягиваем изображение на всю область фона */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Отключаем повторение изображения */
+    opacity: 0.8;
+}
+
+body::-webkit-scrollbar {
+    height: 20px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #ffffff; /* Цвет фона трека (полосы прокрутки) */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #3f5f78cf; /* Цвет ползунка (полосы прокрутки) */
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+form {
+    margin: 20px;
+    background-color: #3f5f78cf;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Добавляем небольшую тень */
+}
+
+/* Стили для контейнера первого уровня */
+.group-container {
+    display: flex;
+}
+
+#switchContainer {
+    position: fixed;
+    right: 20px;
+    top: 5px;
+    z-index: 9999; /* Чтобы переключатель был поверх других элементов */
+}
+
+.switch {
+    position: relative;
+    width: 140px; /* Ширина переключателя */
+    height: 34px; /* Высота переключателя */
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0; /* Перемещаем переключатель вправо */
+    bottom: 0;
+    width: 60px; /* Ширина слайдера */
+    background-color: #3f5f78c2;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px; /* Закругленные углы */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px; /* Перемещаем пункт переключателя вправо */
+    bottom: 4px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%; /* Круглая форма */
+}
+
+input:checked + .slider {
+    background-color: #31495d;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #273b4a;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px); /* Перемещаем пункт переключателя влево */
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Стили для контейнера второго уровня */
+.discipline-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.discipline-container select{
+    width: auto;
+}
+
+/* Стили для контейнера третьего уровня */
+.date-time-container {
+    display: flex;
+}
+
+#from, #to {
+    width: 50%;
+}
+
+label {
+    display: block;
+    white-space: nowrap;
+    margin-left: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+    color:#ffffff;
+    font-size: 20px;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 15px; /* Отступ справа для элементов формы */
+    border: 2px solid #3f5f78;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #2f3132;
+    font-size: 17px;
+}
+
+button {
+    background-color: #3f5f78cf;
+    color: #fff;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    width: 97%; /* кнопка занимает всю доступную ширину */
+    box-sizing: border-box; /* включаем учет границ и отступов внутри указанной ширины */
+    margin: 10px;
+    padding: 10px; /* добавляем внутренние отступы */
+    box-shadow: none;
+}
+
+button:hover {
+    background-color: #4e7593;
+}
+
+#attandance-table-container label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    max-width: 95%;
+    margin: 10px;
+
+}
+
+#attandance-table-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    flex-direction: column; /* Располагать элементы в столбец */
+    font-family: 'Montserrat', sans-serif;
+    margin: 15px; /* Отступы для выравнивания и визуального разделения от других элементов */
+    color: #ffffff;
+}
+
+#attandance-table2 {
+    display: block;
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+#attandance-table2::-webkit-scrollbar {
+    height: 20px;
+}
+
+#attandance-table2::-webkit-scrollbar-track {
+    background-color: #ffffff; /* Цвет фона трека (полосы прокрутки) */
+}
+
+#attandance-table2::-webkit-scrollbar-thumb {
+    background-color: #3f5f78cf; /* Цвет ползунка (полосы прокрутки) */
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+#attandance-table2 th {
+    margin: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+    border: 2px solid white;
+}
+
+#attandance-table2 th[title]{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#attandance-table2 td {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 1px solid white;
+    white-space: nowrap;
+}
+
+#attandance-table2 th:first-child,
+#attandance-table2 td:first-child {
+    z-index: 1; /* Первый столбец поверх других ячеек */
+    position: sticky; /* Делаем первый столбец и заголовки фиксированными */
+    left: 0; /* Закрепляем первый столбец слева */
+    background-color: #3f5f78cb;
+}
+
+#attandance-table2 th:first-child{
+    border: 2px solid white;
+}
+
+#attandance-table2 td:first-child{
+    border: 1px solid white;
+}
+
+#attandance-table {
+    display: block;
+    max-width: 100%;
+}
+
+#attandance-table th {
+    margin: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 8px;
+    text-align: center;
+    border: 2px solid white;
+}
+
+#attandance-table td {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 1px solid white;
+    white-space: nowrap;
+    padding: 8px;
+}
+
+#attandance-table #totalpass{
+    text-align: center; /* Выравнивание по вертикали */
+}
+
+#attandance-table td select{
+    border: 3px solid #273b4a;
+    width: 100%;
+    margin: 0px;
+}
+
+#sendBtn{
+    background-color: #3f5f78cf;
+    color: #fff;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    width: 30%;
+    box-sizing: border-box; /* включаем учет границ и отступов внутри указанной ширины */
+    margin: 10px;
+    padding: 10px; /* добавляем внутренние отступы */
+    display: none;
+    box-shadow: none;
+}
+
+#sendBtn:hover {
+    background-color: #4e7593;
+}
+
+#myModal{
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Добавляем небольшую тень */
+}
+
+#myModal .modal-content {
+    background-color: #3f5f78cf; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    border: 2px solid #fff; /* Цвет рамки */
+    border-radius: 5px; /* Радиус скругления углов */
+    box-shadow: none; /* Убираем тень */
+}
+
+#myModal .modal-header {
+    background-color: #3f5f78cf; /* Цвет фона заголовка */
+    border-bottom: none; /* Убираем нижнюю рамку */
+}
+
+#myModal .modal-title {
+    color: #fff; /* Цвет заголовка */
+    font-size: 25px;
+}
+
+#myModal .modal-body {
+    color: #fff; /* Цвет заголовка */
+    font-size: 15px;
+}
+
+#myModal .btn-success {
+    font-size: 17px;
+    background-color: #305A42; /* Цвет фона для кнопки "Подтвердить" */
+    color: #fff; /* Цвет текста */
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+}
+
+#myModal .btn-danger {
+    font-size: 17px;
+    background-color: #500e1e; /* Цвет фона для кнопки "Отмена" */
+    color: #fff; /* Цвет текста */
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.demoCustomCheckbox {
+    display: none;
+}
+
+.demoCustomCheckbox + label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.demoCustomCheckbox + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.4em;
+    height: 1.4em;
+    border-radius: 25%;
+    border: 2px solid #ffffff;
+}
+
+.demoCustomCheckbox:checked + label::before {
+    background-image: url('../images/done.png');
+    background-size: contain;
+}
+
+.search {
+    display: flex;
+    gap: 10px; /* Промежуток между элементами */
+}
+
+.search input[type="text"] {
+    width: 325px;
+    padding: 8px;
+}
+
+.swal-custom {
+    color:#3f5f78;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    opacity: 0.95;
+    align-items: center;
+}
+
+.swal-button {
+    background-color:#3f5f78;
+    color:#ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    box-shadow: none;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    padding: 5px;
+}
+
