@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Steppe-Book';
+    src: url("../fonts/Steppe-Book.ttf");
+}
+
+@font-face {
+    font-family: 'Steppe-ExtraBold';
+    src: url("../fonts/Steppe-ExtraBold.ttf");
+}
+
+body {
+    background-color: #5243F4;
+    font-family: 'Steppe-Book', sans-serif;
+    color: #FFFFFF;
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+}
+
+.currency {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    border: 1px solid #FFFFFF;
+    padding: 5px 10px;
+    height: 25px;
+    min-width: 25px;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 28px;
+    z-index: 1;
+    user-select: none;
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 40px 0;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    vertical-align: bottom;
+}
+
+.menu {
+    margin-left: 250px;
+}
+
+.menu_list {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.menu_item a {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 130%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu_item a:hover {
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.main_content {
+    padding-top: 161px;
+    padding-bottom: 200px;
+}
+
+.main_info {
+    max-width: 811px;
+}
+
+.main_title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 90px;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+
+.main_text {
+    max-width: 697px;
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 40px;
+}
+
+.button {
+    background-color: #FFFFFF;
+    border-radius: 60px;
+    width: 178px;
+    height: 58px;
+    color: #5243F4;
+    font-size: 18px;
+    padding: 18px;
+    text-align: center;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.button:hover, .button:focus {
+    background-color: #cccaca;
+}
+
+.main_image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+/*стили для выбора печенья*/
+
+.products {
+    padding: 100px 0;
+    position: relative;
+}
+
+.comment_title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 60px;
+    line-height: 100%;
+    text-align: center;
+}
+
+.products_items {
+    display: grid;
+    grid-template-columns: repeat(3, 384px);
+    gap: 90px 24px;
+    margin-top: 110px;
+}
+
+.products_item {
+    background-color: #FFFFFF;
+    color: #5D3427;
+}
+
+.products_item_img {
+    height: 202px;
+    text-align: center;
+}
+
+.products_item_img img {
+    height: 272px;
+    top: -70px;
+    position: relative;
+    max-width: 100%;
+}
+
+.products_item_details {
+    padding: 24px;
+}
+
+.product_item_title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.products_item_text {
+    height: 110px;
+    font-size: 14px;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+
+.products_item_extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products_item_price {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 24px;
+    color: #5243F4;
+    margin-bottom: 10px;
+}
+
+.products_item_weight {
+    font-size: 12px;
+}
+
+.violet_button {
+    background-color: #5243F4;
+    color: #FFFFFF;
+}
+
+.button.violet_button:hover{
+    background-color: #3B2CD8;
+    border: none;
+}
+
+/*стили для love*/
+.love {
+    padding: 64px 0 150px 0;
+}
+
+.love_items {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.love_item {
+    width: 590px;
+    height: 453px;
+}
+
+.love_item_white {
+    background-color: #FFFFFF;
+    padding: 110px 80px;
+    box-sizing: border-box;
+    color: #5D3427;
+}
+
+.love_item_title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 24px;
+    line-height: 110%;
+    margin-bottom: 20px;
+}
+
+.love_item_text {
+    font-size: 18px;
+    line-height: 130%;
+}
+
+/*стили для order*/
+
+.order {
+    margin-bottom: 102px;
+    position: relative;
+}
+
+.order .container {
+    position: relative;
+}
+
+.order_block {
+    margin-top: 103px;
+    background-color: rgb(255 255 255 / 30%);
+    backdrop-filter: blur(50px);
+    display: flex;
+}
+
+.order_form {
+    margin-left: 200px;
+    max-width: 387px;
+    padding: 40px 0 44px 0;
+    box-sizing: border-box;
+}
+
+.order_form_text {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+.order_form_inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.order_form_inputs input {
+    border: 1px solid #FFFFFF;
+    border-radius: 60px;
+    margin-bottom: 16px;
+    padding: 24px 22px;
+    font-size: 18px;
+    width: 385px;
+    height: 68px;
+    background: transparent;
+    box-sizing: border-box;
+    outline: none;
+    color: #FFFFFF;
+}
+
+::placeholder {
+    color: rgb(255 255 255 / 40%);
+}
+
+.order_form_inputs .button.violet_button {
+    width: 387px;
+    height: 71px;
+}
+
+.order_block_img {
+    height: 501px;
+    margin-left: 109px;
+}
+
+.order_img {
+    height: 559px;
+    top: -58px;
+    position: relative;
+}
+
+.order_bg {
+    position: absolute;
+    top: 0;
+    right: calc(100% - 810px);
+    z-index: -1;
+}
+
+/*стили для footer*/
+.footer {
+    padding: 126px 0 50px 0;
+    text-align: center;
+}
+
+.rights {
+    margin-top: 14px;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+/*стили для lines*/
+
+.line1 {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: calc(100% - 960px);
+}
+
+.line2 {
+    position: absolute;
+    z-index: -1;
+    top: -40px;
+    left: 0;
+}
+
+.line3 {
+    position: absolute;
+    z-index: -1;
+    top: -920px;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
